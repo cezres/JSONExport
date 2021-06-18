@@ -89,16 +89,16 @@
                      },
                      {
                      "fetchBasicTypeWithSpecialNeedsPropertyFromMap": "",
-                     "bodyStart": "{\n\t\tlet values = try decoder.container(keyedBy: CodingKeys.self)\n",                     
+                     "bodyStart": "{\n\t\tlet values = try decoder.container(keyedBy: CodingKeys.self)\n",
                      "bodyEnd": "\t}\n",
                      "fetchBasicTypePropertyFromMap": "\t\t<!VarName!> = try values.decodeIfPresent(<!VarType!>.self, forKey: .<!VarName!>)\n",
-                     "signature": "\tinit(from decoder: Decoder) throws ",
                      "fetchArrayOfCustomTypePropertyFromMap": "\t\t<!VarName!> = try values.decodeIfPresent(<!VarType!>.self, forKey: .<!VarName!>)\n",
+                     "signature": "\tpublic init(from decoder: Decoder) throws ",
                      "comment": "",
                      "fetchCustomTypePropertyFromMap": "\t\t<!VarName!> = try <!VarType!>(from: decoder)\n"
                      }
                      ],
-    "modelDefinition": "\nstruct <!ModelName!> : Codable ",
+    "modelDefinition": "\npublic struct <!ModelName!> : Codable ",
     "genericType": "String",
     "getter": "",
     "setter": "",
@@ -107,7 +107,7 @@
     "basicTypesWithSpecialFetchingNeeds": [
     ],
     "displayLangName": "Swift - Struct - Codable",
-    "instanceVarDefinition": "\tlet <!VarName!> : <!VarType!>?\n",
+    "instanceVarDefinition": "\tpublic let <!VarName!> : <!VarType!>\n",
     "supportsFirstLineStatement": "false",
     "modelEnd": "\n}",
     "staticImports": "import Foundation",
