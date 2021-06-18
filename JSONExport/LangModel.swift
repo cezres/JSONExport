@@ -18,6 +18,7 @@ class LangModel{
     var briefDescription : String!
     var constructors : [Constructor]!
 	var dataTypes : DataType!
+    var defaultValue: [String: String]?
 	var displayLangName : String!
 	var fileExtension : String = ""
 	var genericType : String!
@@ -66,6 +67,7 @@ class LangModel{
 		if let dataTypesData = dictionary["dataTypes"] as? NSDictionary{
 				dataTypes = DataType(fromDictionary: dataTypesData)
 			}
+        defaultValue = dictionary["defaultValue"] as? [String: String]
         importHeaderFile = dictionary["importHeaderFile"] as? String
 		displayLangName = dictionary["displayLangName"] as? String
 		fileExtension = dictionary["fileExtension"] as! String

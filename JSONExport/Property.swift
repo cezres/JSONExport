@@ -85,6 +85,9 @@ class Property : Equatable{
     */
     var elementsAreOfCustomType = false
     
+    /// Default value
+    var defaultValue: String?
+    
     /**
     Returns a valid property declaration using the LangModel.instanceVarDefinition value
     */

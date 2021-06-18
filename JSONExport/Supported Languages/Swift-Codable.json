@@ -71,6 +71,15 @@
         "longType": "Double",
         "intType": "Int"
     },
+    "defaultValue": {
+        "String": " ?? \"\"",
+        "Bool": " ?? false",
+        "Float": " ?? 0",
+        "Double": " ?? 0",
+        "Character": " ?? 0",
+        "Double": " ?? 0",
+        "Int": " ?? 0",
+    },
     "wordsToRemoveToGetArrayElementsType": [
                                             "[",
                                             "]"
@@ -91,9 +100,9 @@
                      "fetchBasicTypeWithSpecialNeedsPropertyFromMap": "",
                      "bodyStart": "{\n\t\tlet values = try decoder.container(keyedBy: CodingKeys.self)\n",
                      "bodyEnd": "\t}\n",
-                     "fetchBasicTypePropertyFromMap": "\t\t<!VarName!> = try values.decodeIfPresent(<!VarType!>.self, forKey: .<!VarName!>)\n",
-                     "fetchArrayOfCustomTypePropertyFromMap": "\t\t<!VarName!> = try values.decodeIfPresent(<!VarType!>.self, forKey: .<!VarName!>)\n",
+                     "fetchBasicTypePropertyFromMap": "\t\t<!VarName!> = try values.decodeIfPresent(<!VarType!>.self, forKey: .<!VarName!>)<!VarDefaultValue!>\n",
                      "signature": "\tpublic init(from decoder: Decoder) throws ",
+                     "fetchArrayOfCustomTypePropertyFromMap": "\t\t<!VarName!> = try values.decodeIfPresent(<!VarType!>.self, forKey: .<!VarName!>) ?? []\n",
                      "comment": "",
                      "fetchCustomTypePropertyFromMap": "\t\t<!VarName!> = try <!VarType!>(from: decoder)\n"
                      }

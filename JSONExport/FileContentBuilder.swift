@@ -110,6 +110,9 @@ class FilesContentBuilder{
                 }
             }
             
+            // default value
+            property.defaultValue = lang.defaultValue?[property.type]
+            
             properties.append(property)
             
         }
